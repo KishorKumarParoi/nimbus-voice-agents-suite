@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimbus Voice Agents Suite</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-logo">N</div>
+        <div class="brand-text">
+          <h1>Nimbus Voice Suite</h1>
+          <p>Enterprise Multi-Agent Real-time Voice Architecture</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>WebRTC & LiveKit Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 5 Agent Cards Grid (Matching User's Reference Architecture) -->
+    <section class="agent-grid">
+      <!-- 1. AI Receptionist -->
+      <div class="agent-card active" id="card-receptionist" onclick="selectAgent('receptionist', 'AI Receptionist')">
+        <div>
+          <div class="card-icon-box icon-receptionist">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h2 class="card-title">AI Receptionist</h2>
+          <p class="card-description">An intelligent phone receptionist that answers questions, routes calls, and handles bookings.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">Telephony & Routing</span>
+          <span class="card-btn">Connect &rarr;</span>
+        </div>
+      </div>
+
+      <!-- 2. Meeting Assistant -->
+      <div class="agent-card" id="card-meeting_assistant" onclick="selectAgent('meeting_assistant', 'Meeting Assistant')">
+        <div>
+          <div class="card-icon-box icon-meeting">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
+          <h2 class="card-title">Meeting Assistant</h2>
+          <p class="card-description">A real-time voice assistant that joins meetings, takes notes, and extracts action items.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">Live Scribe & Recaps</span>
+          <span class="card-btn">Connect &rarr;</span>
+        </div>
+      </div>
+
+      <!-- 3. Research Assistant -->
+      <div class="agent-card" id="card-research_assistant" onclick="selectAgent('research_assistant', 'Research Assistant')">
+        <div>
+          <div class="card-icon-box icon-research">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h2 class="card-title">Research Assistant</h2>
+          <p class="card-description">A voice-driven research agent that searches, summarizes, and answers complex questions.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">Deep Synthesis & RAG</span>
+          <span class="card-btn">Connect &rarr;</span>
+        </div>
+      </div>
+
+      <!-- 4. Desktop Assistant -->
+      <div class="agent-card" id="card-desktop_assistant" onclick="selectAgent('desktop_assistant', 'Desktop Assistant')">
+        <div>
+          <div class="card-icon-box icon-desktop">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h2 class="card-title">Desktop Assistant</h2>
+          <p class="card-description">A personal voice assistant that controls your desktop, launches apps, and automates tasks.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">OS Control & Scripts</span>
+          <span class="card-btn">Connect &rarr;</span>
+        </div>
+      </div>
+
+      <!-- 5. Scheduling Agent -->
+      <div class="agent-card" id="card-scheduling_agent" onclick="selectAgent('scheduling_agent', 'Scheduling Agent')">
+        <div>
+          <div class="card-icon-box icon-scheduling">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h2 class="card-title">Scheduling Agent</h2>
+          <p class="card-description">A voice agent that manages calendars, sets reminders, and coordinates meetings.</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-tag">Calendar & Conflicts</span>
+          <span class="card-btn">Connect &rarr;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Interaction Playground -->
+    <main class="playground-section" id="playgroundSection">
+      <div class="playground-header">
+        <div class="active-agent-info">
+          <div class="active-avatar" id="activeAgentAvatar">📞</div>
+          <div class="active-details">
+            <h2 id="activeAgentName">AI Receptionist</h2>
+            <p id="activeAgentTagline">An intelligent phone receptionist that answers questions, routes calls, and handles bookings.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button id="livekitConnectBtn" class="status-pill" style="cursor: pointer; background: #eff6ff; color: #2563eb; font-weight: 600;">
+            📡 LiveKit WebRTC
+          </button>
+          <button id="testSimBtn" class="status-pill" style="cursor: pointer; background: #f8fafc; font-weight: 600;">
+            ⚡ Quick Test Query
+          </button>
+        </div>
+      </div>
+
+      <!-- Waveform Visualizer & Console -->
+      <div class="console-row">
+        <div class="visualizer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 13px; color: #94a3b8; font-weight: 500;" id="engineStatusText">Ready for Voice Input</span>
+            <span style="font-size: 12px; background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 9999px;">Dynamic Waveform (60fps)</span>
+          </div>
+          
+          <canvas id="visualizerCanvas" class="visualizer-canvas"></canvas>
+
+          <div class="visualizer-controls">
+            <button id="micBtn" class="mic-btn">
+              <span>🎙️ Push to Talk</span>
+            </button>
+            <button id="interruptBtn" class="interrupt-btn">
+              <span>🛑 Barge-in Stop</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Latency Waterfall Breakdown (From Nimbus spec) -->
+        <div class="metrics-card">
+          <div class="metrics-title">
+            <span>Latency Waterfall</span>
+            <span style="color: #64748b; font-size: 12px;">Real-time</span>
+          </div>
+
+          <div>
+            <div class="latency-row">
+              <span style="color: #64748b;">ASR Transcription</span>
+              <div class="latency-bar-wrapper">
+                <div class="latency-bar-fill bar-asr" id="barAsr"></div>
+              </div>
+              <span id="asrMs" style="font-weight: 600;">45.0 ms</span>
+            </div>
+
+            <div class="latency-row">
+              <span style="color: #64748b;">LLM Reasoning TTFT</span>
+              <div class="latency-bar-wrapper">
+                <div class="latency-bar-fill bar-llm" id="barLlm"></div>
+              </div>
+              <span id="llmMs" style="font-weight: 600;">180.0 ms</span>
+            </div>
+
+            <div class="latency-row">
+              <span style="color: #64748b;">TTS Audio TTFB</span>
+              <div class="latency-bar-wrapper">
+                <div class="latency-bar-fill bar-tts" id="barTts"></div>
+              </div>
+              <span id="ttsMs" style="font-weight: 600;">135.0 ms</span>
+            </div>
+          </div>
+
+          <div class="total-latency-box">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 2px;">End-to-End Latency</div>
+            <div class="total-ms" id="totalMs">360.0 ms</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity & Transcript Row -->
+      <div class="activity-row">
+        <!-- Live Conversation Transcript -->
+        <div class="transcript-panel">
+          <div class="panel-header">
+            <span>Live Voice Transcript</span>
+            <span style="font-size: 12px; color: #64748b;">Role Bubbles</span>
+          </div>
+          <div class="messages-list" id="messagesList">
+            <div class="msg-bubble msg-agent">
+              Hello! I am your Nimbus voice assistant. You can speak directly to me or use the test query button.
+            </div>
+          </div>
+        </div>
+
+        <!-- Extracted Actions & Tools -->
+        <div class="tools-panel">
+          <div class="panel-header">
+            <span>Executed Tools & Actions</span>
+            <span style="font-size: 12px; color: #64748b;">Real-time</span>
+          </div>
+          <div class="actions-list" id="actionsList">
+            <div class="action-card">
+              ⚡ Multi-agent voice router initialized. Ready for commands.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Configuration & Nimbus Mode Switches -->
+      <div class="settings-bar">
+        <div class="setting-item">
+          <label for="ragSelect"><b>Context Mode:</b></label>
+          <select id="ragSelect">
+            <option value="ragless">RAG-less (Direct Markdown Context)</option>
+            <option value="rag">RAG (Vector Similarity Chunks)</option>
+          </select>
+        </div>
+
+        <div class="setting-item">
+          <label for="modeSelect"><b>Stream Mode:</b></label>
+          <select id="modeSelect">
+            <option value="streaming">Streaming Mode (Lowest Latency)</option>
+            <option value="batch">Batch Mode</option>
+          </select>
+        </div>
+
+        <div class="setting-item">
+          <label for="ttsSelect"><b>TTS Engine:</b></label>
+          <select id="ttsSelect">
+            <option value="elevenlabs">ElevenLabs Turbo v2.5</option>
+            <option value="openai">OpenAI TTS-1</option>
+            <option value="browser">Browser Native Speech</option>
+          </select>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Built with Enterprise AI Rigor &bull; Powered by <a href="https://livekit.io" target="_blank">LiveKit WebRTC</a> &bull; Hosted on <a href="https://nimbus.kishor.tech" target="_blank">Vercel</a></p>
+    </footer>
+  </div>
+
+  <script src="/js/visualizer.js"></script>
+  <script src="/js/voice-engine.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
