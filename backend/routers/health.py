@@ -29,3 +29,4 @@ async def system_status():
         "default_voice": settings.ELEVENLABS_VOICE_ID,
         "default_model": settings.DEFAULT_LLM_MODEL
     }
+

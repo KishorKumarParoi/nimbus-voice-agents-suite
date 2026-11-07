@@ -10,3 +10,4 @@ from backend.app import app
 
 # Vercel Serverless exports app
 app = app
+

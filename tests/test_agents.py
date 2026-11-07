@@ -120,3 +120,4 @@ def test_voice_process_scheduling_agent(client):
     data = response.json()
     assert data["agent_type"] == "scheduling_agent"
     assert len(data["reply"]) > 0
+

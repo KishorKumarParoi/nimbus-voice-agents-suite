@@ -44,3 +44,4 @@ async def transcribe_audio_base64(audio_base64: str, provider: str = "openai") -
     except Exception as e:
         latency_ms = round((time.perf_counter() - start_time) * 1000, 2)
         return f"Audio transcription fallback ({str(e)})", latency_ms
+

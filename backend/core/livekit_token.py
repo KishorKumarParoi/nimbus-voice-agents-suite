@@ -56,3 +56,4 @@ def generate_livekit_token(
     encoded_signature = _base64url_encode(signature)
 
     return f"{encoded_header}.{encoded_payload}.{encoded_signature}"
+

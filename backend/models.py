@@ -73,3 +73,4 @@ class AgentMetadata(BaseModel):
     capabilities: List[str]
     system_prompt: str
     sample_queries: List[str]
+

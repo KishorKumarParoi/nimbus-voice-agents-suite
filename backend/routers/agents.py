@@ -17,3 +17,4 @@ async def get_agent_details(agent_type: AgentType):
         if ag.id == agent_type:
             return ag
     raise HTTPException(status_code=404, detail="Agent not found")
+

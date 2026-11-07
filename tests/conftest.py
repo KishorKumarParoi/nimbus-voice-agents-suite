@@ -11,3 +11,4 @@ from backend.app import app
 @pytest.fixture
 def client():
     return TestClient(app)
+

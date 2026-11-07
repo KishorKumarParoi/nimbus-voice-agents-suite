@@ -57,3 +57,4 @@ class LatencyTracker:
             total_ms=calculated_total if calculated_total > total else total,
             mode=self.mode
         )
+

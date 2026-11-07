@@ -71,3 +71,4 @@ async def generate_speech(
     # Fallback to browser synthesis
     latency_ms = round((time.perf_counter() - start_time) * 1000, 2)
     return None, max(latency_ms, 20.0)
+

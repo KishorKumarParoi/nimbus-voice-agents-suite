@@ -151,3 +151,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     list.prepend(card);
   }
 });
+

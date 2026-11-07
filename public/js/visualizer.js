@@ -103,3 +103,4 @@ class AudioWaveVisualizer {
     this.animationId = requestAnimationFrame(() => this.animate());
   }
 }
+

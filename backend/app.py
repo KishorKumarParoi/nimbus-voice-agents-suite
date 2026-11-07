@@ -51,3 +51,4 @@ async def serve_playground():
     if os.path.exists(playground_file):
         return FileResponse(playground_file)
     return FileResponse(os.path.join(PUBLIC_DIR, "index.html"))
+

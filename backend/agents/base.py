@@ -150,3 +150,4 @@ class BaseVoiceAgent(ABC):
     def _generate_fallback(self, user_message: str) -> Tuple[str, List[ToolExecutionResult], List[str]]:
         """Safe deterministic fallback when external LLM is offline or unconfigured."""
         pass
+
